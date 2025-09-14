@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/theme";
 
-const roboto = Roboto({
+const roboto = Montserrat({
   subsets: ["latin"],
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="pt-8 lg:pt-16 px-6">{children}</main>
         </ThemeProvider>
       </body>
     </html>
